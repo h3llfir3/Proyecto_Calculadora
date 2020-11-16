@@ -1,4 +1,5 @@
-﻿using System.IO.Compression;
+﻿using System;
+using System.IO.Compression;
 
 namespace Calculadora.Model
 {
@@ -22,13 +23,18 @@ namespace Calculadora.Model
             return accumulated;
         }
         
-        // 
+        // Calcula el factorial de un número
         public static int CalcFactorial(int n)
         {
             int accumulated = 1;
             for (int i = 1; i <= n; i++)
                 accumulated *= i;
             return accumulated;
+        }
+
+        public static int IsPrime(int n)
+        {
+            return n;
         }
     }
 }

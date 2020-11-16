@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 namespace Calculadora
 {
     class UserInterface
@@ -9,20 +10,76 @@ namespace Calculadora
         // Imprime el menú principal
         public static void PrintMainMenu()
         {
-            System.Console.WriteLine("           MENÚ");
-            System.Console.WriteLine("----------------------------");
-            System.Console.WriteLine("1) Potencias en base 2");
-            System.Console.WriteLine("2) Calcular sumatorio");
-            System.Console.WriteLine("3) Calcular factorial");
-            System.Console.WriteLine("4) Calcular si es número primo");
-            System.Console.WriteLine("3) Imprimir la serie de Fibonacci");
-            System.Console.WriteLine("0) Salir");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("       MENÚ PRINCIPAL");
+            Console.WriteLine("----------------------------");
+            Console.WriteLine("1) Potencias en base 2");
+            Console.WriteLine("2) Calcular sumatorio");
+            Console.WriteLine("3) Calcular factorial");
+            Console.WriteLine("4) Calcular si es número primo");
+            Console.WriteLine("3) Imprimir la serie de Fibonacci");
+            Console.WriteLine("0) Salir");
         }
 
         public static void PrintPowerOf2Menu()
         {
-            System.Console.WriteLine("         POTENCIAS EN BASE 2");
-            System.Console.WriteLine("---------------------------------------");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("         POTENCIAS EN BASE 2");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("Introduzca el exponente a calcular: ");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="integerInput">This parameter is the title of the function.</param>
+        /// <returns>Returns the user input converted into an integer.</returns>
+        public static int GetUserIntegerInput(string integerInput)
+        {
+            while (true)
+            {
+                Console.WriteLine(integerInput);
+                string number = Console.ReadLine();
+                try
+                {
+                    int convertedInteger = Convert.ToInt32(number);
+                    return convertedInteger;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Entrada no válida.");
+                }
+            }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static int ReadUserOption()
+        {
+            string option = Console.ReadLine();
+            try
+            {
+                int userOption = Convert.ToInt32(option);
+                return userOption;
+            }
+            catch (Exception e)
+            {
+                //e.Message;
+                return -1;
+            }
+        }
+
+        public static int ReadUserOption(int minValidInput, int maxValidInput)
+        {
+            while (true)
+            {
+                int option = ReadUserOption();
+                if (minValidInput <= option && option <= maxValidInput)
+                    return option;
+                else
+                    Console.WriteLine("Valor no válido. Por favor, introduzca un valor entre " + minValidInput + " y " + maxValidInput);
+            }
         }
     }
 }

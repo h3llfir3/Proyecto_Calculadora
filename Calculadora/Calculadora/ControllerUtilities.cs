@@ -1,7 +1,0 @@
-﻿
-namespace Calculadora
-{
-    class ControllerUtilities
-    {
-    }
-}
