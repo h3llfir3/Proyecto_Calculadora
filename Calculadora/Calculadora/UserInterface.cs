@@ -13,12 +13,12 @@ namespace Calculadora
             Console.WriteLine("----------------------------");
             Console.WriteLine("       MENÚ PRINCIPAL");
             Console.WriteLine("----------------------------");
-            Console.WriteLine("1) Potencias en base 2");
-            Console.WriteLine("2) Calcular sumatorio");
-            Console.WriteLine("3) Calcular factorial");
-            Console.WriteLine("4) Calcular si es número primo");
-            Console.WriteLine("3) Imprimir la serie de Fibonacci");
-            Console.WriteLine("0) Salir");
+            Console.WriteLine("1) Potencias en base 2.");
+            Console.WriteLine("2) Calcular el sumatorio de un número.");
+            Console.WriteLine("3) Calcular el factorial de un número.");
+            Console.WriteLine("4) Calcular si es número primo.");
+            Console.WriteLine("3) Imprimir la serie de Fibonacci.");
+            Console.WriteLine("0) Salir.");
         }
 
         public static void PrintPowerOf2Menu()
@@ -26,7 +26,6 @@ namespace Calculadora
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("         POTENCIAS EN BASE 2");
             Console.WriteLine("---------------------------------------");
-            Console.WriteLine("Introduzca el exponente a calcular: ");
         }
 
         /// <summary>
@@ -80,6 +79,13 @@ namespace Calculadora
                 else
                     Console.WriteLine("Valor no válido. Por favor, introduzca un valor entre " + minValidInput + " y " + maxValidInput);
             }
+        }
+
+        public static void ExitSubMenu()
+        {
+            Console.ReadLine();
+            //Console.WriteLine("Pulse 'Intro' para continuar...");
+            //while (Console.ReadKey().Key != ConsoleKey.Enter)
         }
     }
 }
