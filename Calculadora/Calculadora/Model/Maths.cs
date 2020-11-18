@@ -41,5 +41,20 @@ namespace Calculadora.Model
             }
             return true;
         }
+
+        public static void PrintFibonacci(int n)
+        {
+            int number1 = 0;
+            int number2 = 1;
+            int nf = 0;
+            Console.WriteLine(number1 + ", " + number2);
+            for (int i = 0; i < n; i++)
+            {
+                nf = number1 + number2;
+                Console.WriteLine(nf + ", ");
+                number1 = number2;
+                number2 = nf;
+            }
+        }
     }
 }

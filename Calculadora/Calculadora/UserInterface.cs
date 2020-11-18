@@ -101,7 +101,8 @@ namespace Calculadora
                 if (minValidInput <= option && option <= maxValidInput)
                     return option;
                 else
-                    Console.WriteLine("Valor no válido. Por favor, introduzca un valor entre " + minValidInput + " y " + maxValidInput);
+                    Console.WriteLine("Valor no válido. Por favor, introduzca un valor entre " + minValidInput + " y " + maxValidInput + ".");
+                    // arreglar error aquí
             }
         }
 
