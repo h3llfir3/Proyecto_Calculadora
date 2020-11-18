@@ -10,23 +10,47 @@ namespace Calculadora
         // Imprime el menú principal
         public static void PrintMainMenu()
         {
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("       MENÚ PRINCIPAL");
-            Console.WriteLine("----------------------------");
-            Console.WriteLine("1) Potencias en base 2.");
-            Console.WriteLine("2) Calcular el sumatorio de un número.");
-            Console.WriteLine("3) Calcular el factorial de un número.");
-            Console.WriteLine("4) Calcular si es número primo.");
-            Console.WriteLine("3) Imprimir la serie de Fibonacci.");
-            Console.WriteLine("0) Salir.");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("            MENÚ PRINCIPAL");
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("1) Potencia en base 2.");
+            Console.WriteLine("2) Sumatorio de un número.");
+            Console.WriteLine("3) Factorial de un número.");
+            Console.WriteLine("4) Calcular si el número es primo.");
+            Console.WriteLine("5) Imprimir la serie de Fibonacci.");
+            Console.WriteLine("0) Salir del programa.");
+            Console.WriteLine();
         }
 
         public static void PrintPowerOf2Menu()
         {
+            Console.Clear();
             Console.WriteLine("---------------------------------------");
-            Console.WriteLine("         POTENCIAS EN BASE 2");
+            Console.WriteLine("          POTENCIAS EN BASE 2");
             Console.WriteLine("---------------------------------------");
         }
+        public static void PrintSummationMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("         SUMATORIO DE UN NÚMERO");
+            Console.WriteLine("---------------------------------------");
+        }
+        public static void PrintFactorialMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("         FACTORIAL DE UN NÚMERO");
+            Console.WriteLine("---------------------------------------");
+        }
+        public static void PrintPrimeMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("            ¿ES PRIMO O NO?");
+            Console.WriteLine("---------------------------------------");
+        }
+
 
         /// <summary>
         /// 
@@ -83,7 +107,10 @@ namespace Calculadora
 
         public static void ExitSubMenu()
         {
+            Console.WriteLine();
+            Console.WriteLine("Pulse \"Intro\" para finalizar.");
             Console.ReadLine();
+            Console.Clear();
             //Console.WriteLine("Pulse 'Intro' para continuar...");
             //while (Console.ReadKey().Key != ConsoleKey.Enter)
         }
