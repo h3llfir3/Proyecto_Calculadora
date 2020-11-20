@@ -5,7 +5,6 @@ namespace Calculadora.Model
 {
     class Maths
     {
-        // Calcula una potencia en base 2
         public static int CalcPowerOf2(int n)
         {
             int accumulated = 1;
@@ -14,7 +13,6 @@ namespace Calculadora.Model
             return accumulated;
         }
 
-        // Calcula el sumatorio de un número
         public static int CalcSummation(int n)
         {
             int accumulated = 0;
@@ -23,7 +21,6 @@ namespace Calculadora.Model
             return accumulated;
         }
         
-        // Calcula el factorial de un número
         public static int CalcFactorial(int n)
         {
             int accumulated = 1;
@@ -56,7 +53,7 @@ namespace Calculadora.Model
                 return serie += number1.ToString() + ", " + number2.ToString();
             else
             {
-                Console.Write(number1 + ", " + number2);
+                serie += number1.ToString() + ", " + number2.ToString();
                 for (int i = 0; i < n; i++)
                 {
                     int nf = number1 + number2;
