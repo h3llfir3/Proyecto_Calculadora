@@ -42,28 +42,29 @@ namespace Calculadora.Model
             return true;
         }
 
-        public static void PrintFibonacci(int n)
+        public static string PrintFibonacci(int n)
         {
             int number1 = 0;
             int number2 = 1;
+            string serie = "";
             
             if (n <= 0)
-                Console.WriteLine("La entrada no es válida.");
+                return serie += "La entrada no es válida.";
             else if (n == 1)
-                Console.WriteLine(number1);
+                return serie += number1.ToString();
             else if (n == 2)
-                Console.Write(number1 + ", " + number2);
+                return serie += number1.ToString() + ", " + number2.ToString();
             else
             {
                 Console.Write(number1 + ", " + number2);
                 for (int i = 0; i < n; i++)
                 {
                     int nf = number1 + number2;
-                    Console.Write(", " + nf);
                     number1 = number2;
                     number2 = nf;
+                    serie += ", " + nf.ToString();
                 }
-                Console.WriteLine();
+                return serie;
             }
         }
     }

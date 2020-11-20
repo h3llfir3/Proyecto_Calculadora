@@ -10,9 +10,11 @@ namespace Calculadora
         // Imprime el menú principal
         public static void PrintMainMenu()
         {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("            MENÚ PRINCIPAL");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
             Console.WriteLine("1) Potencia en base 2.");
             Console.WriteLine("2) Sumatorio de un número.");
             Console.WriteLine("3) Factorial de un número.");
@@ -25,37 +27,47 @@ namespace Calculadora
         public static void PrintPowerOf2Menu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("          POTENCIAS EN BASE 2");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
         }
         public static void PrintSummationMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("         SUMATORIO DE UN NÚMERO");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
         }
         public static void PrintFactorialMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("         FACTORIAL DE UN NÚMERO");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
         }
         public static void PrintPrimeMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("            ¿ES PRIMO O NO?");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
         }
         public static void PrintFibonacciMenu()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("---------------------------------------");
             Console.WriteLine("            SERIE FIBONACCI");
             Console.WriteLine("---------------------------------------");
+            Console.ResetColor();
         }
 
 
@@ -99,8 +111,6 @@ namespace Calculadora
                 return -1;
             }
         }
-
-
 
         public static void ExitSubMenu()
         {

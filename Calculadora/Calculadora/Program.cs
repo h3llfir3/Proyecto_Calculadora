@@ -6,8 +6,6 @@ namespace Calculadora
     {
         static void LaunchPowerOf2Menu()
         {
-            while (true)
-            {
                 UserInterface.PrintPowerOf2Menu();
                 int number = UserInterface.GetUserIntegerInput("Introduzca el exponente a calcular: ");
                 Console.WriteLine();
@@ -15,14 +13,10 @@ namespace Calculadora
                 Console.WriteLine("2 elevado a " + number + " es " + result);
                 UserInterface.ExitSubMenu();
                 return;
-
-            }
         }
 
         static void LaunchCalcSumationMenu()
         {
-            while (true)
-            {
                 UserInterface.PrintSummationMenu();
                 int number = UserInterface.GetUserIntegerInput("Introduzca el número del cual obtener su sumatorio: ");
                 Console.WriteLine();
@@ -30,13 +24,10 @@ namespace Calculadora
                 Console.WriteLine("El sumatorio de " + number + " es " + result);
                 UserInterface.ExitSubMenu();
                 return;
-            }
         }
 
         static void LaunchFactorialMenu()
         {
-            while (true)
-            {
                 UserInterface.PrintFactorialMenu();
                 int number = UserInterface.GetUserIntegerInput("Introduzca el número del cual obtener su factorial: ");
                 Console.WriteLine();
@@ -44,13 +35,10 @@ namespace Calculadora
                 Console.WriteLine("El factorial de " + number + " es " + result);
                 UserInterface.ExitSubMenu();
                 return;
-            }
         }
 
         static void LaunchPrimeMenu()
         {
-            while (true)
-            {
                 UserInterface.PrintPrimeMenu();
                 int number = UserInterface.GetUserIntegerInput("Introduzca el número a comprobar: ");
                 Console.WriteLine();
@@ -61,21 +49,17 @@ namespace Calculadora
                     Console.WriteLine("El número " + number + " no es primo.");
                 UserInterface.ExitSubMenu();
                 return;
-            }
         }
 
         static void LaunchFibonacciMenu()
         {
-            while (true)
-            {
                 UserInterface.PrintFibonacciMenu();
                 int number = UserInterface.GetUserIntegerInput("Introduzca la cantidad de números que desee mostrar: ");
                 Console.WriteLine();
-                Model.Maths.PrintFibonacci(number);
+                Console.Write(Model.Maths.PrintFibonacci(number));
+                Console.WriteLine();
                 UserInterface.ExitSubMenu();
-                return;
-            }
-            
+                return;            
         }
         static void LaunchMainMenu()
         {
