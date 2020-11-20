@@ -63,12 +63,26 @@ namespace Calculadora
                 return;
             }
         }
+
+        static void LaunchFibonacciMenu()
+        {
+            while (true)
+            {
+                UserInterface.PrintFibonacciMenu();
+                int number = UserInterface.GetUserIntegerInput("Introduzca la cantidad de números que desee mostrar: ");
+                Console.WriteLine();
+                Model.Maths.PrintFibonacci(number);
+                UserInterface.ExitSubMenu();
+                return;
+            }
+            
+        }
         static void LaunchMainMenu()
         {
             while (true)
             {
                 UserInterface.PrintMainMenu();
-                int option = UserInterface.ReadUserOption(0, 5);
+                int option = UserInterface.ReadUserOption();
                 switch (option)
                 {
                     case 1:
@@ -82,6 +96,15 @@ namespace Calculadora
                         break;
                     case 4:
                         LaunchPrimeMenu();
+                        break;
+                    case 5:
+                        LaunchFibonacciMenu();
+                        break;
+                    case 0:
+                        Environment.Exit(1);
+                        break;
+                    default:
+                        Console.WriteLine("Introduzca un valor válido.");
                         break;
 
                 }    

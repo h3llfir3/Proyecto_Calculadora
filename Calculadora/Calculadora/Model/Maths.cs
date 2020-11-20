@@ -46,14 +46,24 @@ namespace Calculadora.Model
         {
             int number1 = 0;
             int number2 = 1;
-            int nf = 0;
-            Console.WriteLine(number1 + ", " + number2);
-            for (int i = 0; i < n; i++)
+            
+            if (n <= 0)
+                Console.WriteLine("La entrada no es válida.");
+            else if (n == 1)
+                Console.WriteLine(number1);
+            else if (n == 2)
+                Console.Write(number1 + ", " + number2);
+            else
             {
-                nf = number1 + number2;
-                Console.WriteLine(nf + ", ");
-                number1 = number2;
-                number2 = nf;
+                Console.Write(number1 + ", " + number2);
+                for (int i = 0; i < n; i++)
+                {
+                    int nf = number1 + number2;
+                    Console.Write(", " + nf);
+                    number1 = number2;
+                    number2 = nf;
+                }
+                Console.WriteLine();
             }
         }
     }

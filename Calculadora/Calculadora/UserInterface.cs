@@ -50,6 +50,13 @@ namespace Calculadora
             Console.WriteLine("            ¿ES PRIMO O NO?");
             Console.WriteLine("---------------------------------------");
         }
+        public static void PrintFibonacciMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("            SERIE FIBONACCI");
+            Console.WriteLine("---------------------------------------");
+        }
 
 
         /// <summary>
@@ -93,18 +100,7 @@ namespace Calculadora
             }
         }
 
-        public static int ReadUserOption(int minValidInput, int maxValidInput)
-        {
-            while (true)
-            {
-                int option = ReadUserOption();
-                if (minValidInput <= option && option <= maxValidInput)
-                    return option;
-                else
-                    Console.WriteLine("Valor no válido. Por favor, introduzca un valor entre " + minValidInput + " y " + maxValidInput + ".");
-                    // arreglar error aquí
-            }
-        }
+
 
         public static void ExitSubMenu()
         {
