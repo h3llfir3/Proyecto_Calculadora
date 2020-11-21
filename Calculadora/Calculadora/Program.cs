@@ -63,7 +63,8 @@ namespace Calculadora
         }
         static void LaunchMainMenu()
         {
-            while (true)
+            bool exit = false;
+            while (exit == false)
             {
                 UserInterface.PrintMainMenu();
                 int option = UserInterface.ReadUserOption();
@@ -85,7 +86,7 @@ namespace Calculadora
                         LaunchFibonacciMenu();
                         break;
                     case 0:
-                        Environment.Exit(1);
+                        exit = true;
                         break;
                     default:
                         Console.WriteLine("Introduzca un valor válido.");
