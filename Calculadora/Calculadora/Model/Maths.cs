@@ -5,6 +5,11 @@ namespace Calculadora.Model
 {
     class Maths
     {
+        /// <summary>
+        /// This function takes a number from the user and elevates 2 to that power
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public static int CalcPowerOf2(int n)
         {
             int accumulated = 1;
